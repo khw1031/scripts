@@ -12,7 +12,7 @@ fi
 # 기본 설정
 SOURCE_LANG="EN"
 TARGET_LANG="KO"
-API_URL="https://api-free.deepl.com/v2/translate"
+API_URL="https://api.deepl.com/v2/translate"
 
 # 사용법 함수
 usage() {
