@@ -1,5 +1,12 @@
 # Shell Scripts
 
+## consume_document.sh
+
+```sh
+./consume_document/input.md
+./consume_document/run.sh
+```
+
 ## translate.sh
 
 파이프를 사용한 직접 입력
