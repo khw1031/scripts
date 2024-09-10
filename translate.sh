@@ -46,10 +46,11 @@ INPUT=$(cat)
 # API 요청
 RESPONSE=$(curl -s -X POST $API_URL \
     -H "Authorization: DeepL-Auth-Key $API_KEY" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    --data-urlencode "text=$INPUT" \
-    --data-urlencode "source_lang=$SOURCE_LANG" \
-    --data-urlencode "target_lang=$TARGET_LANG")
+    -H "Content-Type: application/json" \
+    --data "$(jq -n --arg text "$INPUT" \
+        --arg source "$SOURCE_LANG" \
+        --arg target "$TARGET_LANG" \
+        '{text: [$text], source_lang: $source, target_lang: $target}')")
 
 # 응답 확인 및 오류 처리
 if echo "$RESPONSE" | jq -e '.error' > /dev/null; then
