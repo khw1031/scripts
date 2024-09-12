@@ -1,5 +1,26 @@
 # Shell Scripts
 
+## append.sh
+
+```sh
+# Add code to your .zshrc or .bashrc file. then:
+pbpaste | append "Refactor this code for me" | help coding
+```
+
+## help.sh
+
+```sh
+# Add code to your .zshrc or .bashrc file. then:
+pbpaste | help coding
+```
+
+## raw_query.sh
+
+```sh
+# Add code to your .zshrc or .bashrc file. then:
+raw_query "What is the meaning of life?"
+```
+
 ## consume_document.sh
 
 ```sh
